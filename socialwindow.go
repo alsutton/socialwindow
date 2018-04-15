@@ -68,7 +68,7 @@ func main() {
 			fmt.Println(err)
 			break
 		}
-		fmt.Printf("Deleted #%d : %d : %s", i, tweet.ID, tweet.CreatedAt)
+		fmt.Printf("Deleted #%d : %s : %s", tweet.ID, tweet.CreatedAt, row[6])
 		fmt.Println()
 	}
 }
