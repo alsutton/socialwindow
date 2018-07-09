@@ -1,16 +1,17 @@
 package main
 
 import (
+	"encoding/csv"
+	"flag"
+	"fmt"
+	"log"
+	"os"
+	"strconv"
+	"time"
+
+	"github.com/coreos/pkg/flagutil"
 	"github.com/dghubble/go-twitter/twitter"
 	"github.com/dghubble/oauth1"
-	"flag"
-	"os"
-	"log"
-	"github.com/coreos/pkg/flagutil"
-	"fmt"
-	"time"
-	"encoding/csv"
-	"strconv"
 )
 
 func main() {
@@ -44,7 +45,7 @@ func main() {
 
 	if err != nil {
 		fmt.Println(err)
-		return;
+		return
 	}
 
 	cutoff := time.Now().AddDate(0, -6, 0)
@@ -59,7 +60,7 @@ func main() {
 
 		timestamp, _ := time.Parse("2006-01-02 15:04:05 -0700", row[3])
 		if cutoff.Before(timestamp) {
-			continue;
+			continue
 		}
 
 		id, _ := strconv.ParseInt(row[0], 10, 64)
