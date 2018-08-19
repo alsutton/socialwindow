@@ -20,6 +20,7 @@ func main() {
 	consumerSecret := flags.String("consumer-secret", "", "Twitter Consumer Secret")
 	accessToken := flags.String("access-token", "", "Twitter Access Token")
 	accessSecret := flags.String("access-secret", "", "Twitter Access Secret")
+	tweetArchive := flags.String("tweet-archive", "D:\\tweets.csv", "Twitter Archive Downloaded From Twitter")
 
 	flags.Parse(os.Args[1:])
 	flagutil.SetFlagsFromEnv(flags, "TWITTER")
@@ -40,7 +41,7 @@ func main() {
 	}
 	client.Accounts.VerifyCredentials(verifyParams)
 
-	f, err := os.Open("D:\\tweets.csv")
+	f, err := os.Open(*tweetArchive)
 	defer f.Close()
 
 	if err != nil {
