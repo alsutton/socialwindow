@@ -7,15 +7,7 @@ I've used a generic name so the functionality can be expanded in the future.
 
 ## Requirements
 
-It *heavily* uses the work of [Dalton Hubble](https://github.com/dghubble/) and will need you to run the following
-commands to install the required pieces of his work;
-
-```bash
-go get github.com/dghubble/oauth1
-go get github.com/dghubble/go-twitter/twitter
-```
-
-You will also need to manually create an application in [Twitters apps portal](https://apps.twitter.com/), and then
+You will need to manually create an application in [Twitters apps portal](https://apps.twitter.com/), and then
 give it access to your profile. Once you've done this you will find, under the `Keys and Access Tokens` tab,
 the following pieces of information you'll need to put into the source code; `Consumer Key (API Key)`,
 `Consumer Secret (API Secret)`, `Access Token`, and `Access Token Secret`.
@@ -29,7 +21,8 @@ it you'll need to update the filename on the following line to point to the twee
 	f, err := os.Open("D:\\tweets.csv")
 ```
 
-## Pull Requests
+## Shout Out
 
-Please be kind; I've not written a lot of Go before, so be constructive in your PRs rather
-than pointing out my obvious lack of Go skills.
+It *heavily* uses the work of [Dalton Hubble](https://github.com/dghubble/), which you can see in the go.mod
+modules file.
+
