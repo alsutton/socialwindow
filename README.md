@@ -1,3 +1,6 @@
+**PLEASE NOTE:** Twitter [changed the format of the archive](https://www.reddit.com/r/Twitter/comments/c1h603/twitter_archive/)
+they allow users to download which  means this app will no longer work.
+
 # Social Window
 
 This is a small Go application which will clear all of tweets older then 6 months from your feed. Please note;
